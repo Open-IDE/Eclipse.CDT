@@ -1,0 +1,13 @@
+---
+
+- name: Install java-11-openjdk
+  ansible.builtin.dnf:
+    name:
+      - java-11-openjdk
+    state: latest
+  become: true
+
+- name: Run command if /path/to/database does not exist (with 'cmd' parameter)
+  ansible.builtin.command:
+    cmd: echo -e "2" | sudo alternatives --config java
+    creates: /path/to/database

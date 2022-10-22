@@ -3,3 +3,4 @@
 
   roles:
   - Eclipse CDT
+  - bugfix/java-17
