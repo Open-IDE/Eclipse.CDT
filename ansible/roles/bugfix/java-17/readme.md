@@ -1,8 +1,8 @@
 # Must use java verison < 17 !
 
 Problem: "JSPs can't be compiled on Java 17+"
-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=578221
 - https://github.com/eclipse-platform/eclipse.platform.ua/issues/18
+  - https://bugs.eclipse.org/bugs/show_bug.cgi?id=578221
 - https://github.com/eclipse-platform/eclipse.platform.swt/issues/439
 
 Solution:
