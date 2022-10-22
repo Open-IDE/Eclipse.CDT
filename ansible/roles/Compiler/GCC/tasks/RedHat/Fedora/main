@@ -1,0 +1,7 @@
+---
+- name: Install GCC C++
+  ansible.builtin.dnf:
+    name:
+      - gcc-c++
+    state: latest
+  become: true
