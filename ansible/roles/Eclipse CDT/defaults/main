@@ -1,0 +1,15 @@
+---
+
+# source
+source: download IDE
+
+# Options
+arduino: false
+llvm: true
+native: true
+qt: true
+sdk: true
+terminal: true
+
+# These packages don't exist anymore, But a good Features list!
+# https://packages.fedoraproject.org/pkgs/eclipse-cdt/

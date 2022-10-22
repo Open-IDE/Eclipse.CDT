@@ -1,0 +1,6 @@
+---
+# plugin download
+major_version: "10.7"
+minor_version: "1"
+plugin_version: "{{major_version}}.{{minor_version}}"
+plugin_download: "https://www.eclipse.org/downloads/download.php?file=/tools/cdt/releases/{{major_version}}/cdt-{{version}}/cdt-{{version}}.zip"
