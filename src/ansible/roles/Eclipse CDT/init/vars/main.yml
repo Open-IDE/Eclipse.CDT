@@ -1,0 +1,5 @@
+uni_dir: "{{ ansible_env.HOME }}/.uni/avaIDE/eclipse"
+workspace: "{{ uni_dir }}/eclipse-workspace"
+
+config_dir: ".eclipse"
+setups_dir: "{{ ansible_env.HOME }}/{{ config_dir }}/org.eclipse.oomph.setup/setups"

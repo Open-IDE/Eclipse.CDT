@@ -1,0 +1,21 @@
+- name: Create .eclipse & workspace directory
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+  - "{{ workspace }}"
+  - "{{ setups_dir }}"
+
+- name: Copy .eclipse
+  ansible.builtin.copy:
+    src: .eclipse
+    dest: "{{ ansible_env.HOME }}/"
+
+- name: Template settings into .eclipse
+  ansible.builtin.template:
+    src: "{{ item }}.j2"
+    dest: "{{ setups_dir }}/{{ item }}"
+  loop:
+  - locations.setup
+  - user.products.setup
+  - user.setup
