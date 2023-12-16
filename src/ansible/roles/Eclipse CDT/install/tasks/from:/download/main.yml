@@ -1,0 +1,30 @@
+---
+# Guide: https://github.com/eclipse-cdt/cdt/blob/main/Downloads.md
+# from: https://www.eclipse.org/downloads/packages/release
+
+- name: Create install directory
+  become: yes
+  ansible.builtin.file:
+    path: "{{ download_dir }}"
+    state: directory
+    owner: "{{ ansible_env.USER }}"
+
+- name: Download CDT
+  ansible.builtin.get_url:
+    url: "{{ ide_download }}"
+    dest: "{{ download_dir }}/{{ file_targz }}"
+
+- name: Unarchive
+  ansible.builtin.unarchive:
+    src: "{{ download_dir }}/{{ file_targz }}"
+    dest: "{{ download_dir }}/"
+    creates: "{{ install_dir }}/"
+    remote_src: yes
+
+- name: Launcher
+  become: true
+  ansible.builtin.template:
+    src: eclipse.desktop.j2
+    dest: /usr/share/applications/eclipse.desktop
+    owner: root
+    group: root

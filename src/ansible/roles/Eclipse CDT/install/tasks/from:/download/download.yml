@@ -1,0 +1,10 @@
+# Full IDE download
+ide_version: "2022-06"
+file_targz: "eclipse-cpp-{{ide_version}}-R-linux-gtk-{{ansible_architecture}}.tar.gz"
+
+mirror: "https://mirrors.jevincanders.net/eclipse/technology/epp/downloads/release/{{ide_version}}/R/{{file_targz}}"
+ide_download: "{{mirror}}"
+
+# install directory
+download_dir: "/var/eclipse-cdt"
+install_dir: "{{download_dir}}/eclipse"

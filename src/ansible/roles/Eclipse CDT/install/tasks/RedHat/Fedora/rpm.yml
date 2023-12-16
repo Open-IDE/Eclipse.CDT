@@ -1,0 +1,4 @@
+---
+
+- name: include source
+  include_tasks: "from:/{{ source }}"

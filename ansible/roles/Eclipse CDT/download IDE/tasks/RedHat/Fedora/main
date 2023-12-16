@@ -1,6 +1,0 @@
----
-
-- include_tasks: '{{role_path}}/tasks/common/download'
-
-# - debug:
-#     msg: '{{role_path}}'
