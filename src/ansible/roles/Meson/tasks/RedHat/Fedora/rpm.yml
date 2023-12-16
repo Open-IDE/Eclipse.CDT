@@ -1,0 +1,7 @@
+---
+- name: Install Meson build tool
+  become: true
+  ansible.builtin.dnf:
+    name:
+      - meson
+    state: latest

@@ -8,3 +8,5 @@
   # - bugfix/java-17  # Run this before Eclipse install
   - Eclipse CDT
   - Compiler
+  - Meson
+  - CMake
