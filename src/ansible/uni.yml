@@ -7,5 +7,4 @@
   roles:
   # - bugfix/java-17  # Run this before Eclipse install
   - Eclipse CDT
-  # - Compiler/Clang
-  # - Compiler/GCC
+  - Compiler

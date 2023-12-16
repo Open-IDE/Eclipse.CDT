@@ -1,5 +1,5 @@
 ---
-- name: Install GCC C++
+- name: Install GNU C++ Compiler
   ansible.builtin.dnf:
     name:
       - gcc-c++

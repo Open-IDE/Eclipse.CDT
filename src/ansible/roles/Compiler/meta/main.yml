@@ -1,0 +1,3 @@
+dependencies:
+- Compiler/GNU C++
+- Compiler/Clang

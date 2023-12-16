@@ -1,4 +1,4 @@
 ---
 
 - name: include source
-  include_tasks: "from:/{{ source }}"
+  include_tasks: "from:/{{ source }}/main.yml"

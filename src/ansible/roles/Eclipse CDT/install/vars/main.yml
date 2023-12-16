@@ -1,3 +1,5 @@
+---
+
 # Options
 arduino: false
 llvm: true
@@ -8,3 +10,15 @@ terminal: true
 
 # These packages don't exist anymore, But a good Features list!
 # https://packages.fedoraproject.org/pkgs/eclipse-cdt/
+
+
+# Full IDE download
+ide_version: "2023-12"
+file_name: "eclipse-cpp-{{ide_version}}-R-linux-gtk-{{ansible_architecture}}.tar.gz"
+
+mirror: "https://mirror.umd.edu"
+download_url: "{{ mirror }}/eclipse/technology/epp/downloads/release/{{ ide_version }}/R/{{ file_name }}"
+
+# install directory
+download_dir: "/opt/eclipse-cdt"
+install_dir: "{{ download_dir }}/eclipse"
