@@ -4,7 +4,7 @@
 
 - name: exists
   stat:
-    path: "{{ install_dir }}"
+    path: "{{ install_dir }}/eclipse.ini"
   register: install
 
 - name: Install
