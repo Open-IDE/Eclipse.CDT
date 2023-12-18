@@ -33,12 +33,13 @@
       creates: "{{ install_dir }}/"
       remote_src: yes
 
-  - name: Launcher
-    become: true
-    ansible.builtin.template:
-      src: eclipse.desktop.j2
-      dest: "{{ desktop_file_dir }}/{{ desktop_file }}"
-      owner: root
-      group: root
+  when: not install.stat.exists
 
-  when: not install.stat.exists or not launcher.stat.exists
+- name: Launcher
+  become: true
+  ansible.builtin.template:
+    src: eclipse.desktop.j2
+    dest: "{{ desktop_file_dir }}/{{ desktop_file }}"
+    owner: root
+    group: root
+  when: not launcher.stat.exists
