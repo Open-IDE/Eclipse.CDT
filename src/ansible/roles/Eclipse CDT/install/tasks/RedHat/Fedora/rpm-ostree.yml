@@ -1,3 +1,4 @@
+# from: https://docs.fedoraproject.org/en-US/fedora-silverblue/faq/#_how_can_i_install_my_preferred_ide_on_fedora_silverblue
 - name: Setting filesystem Prefix when rpm-ostree
   ansible.builtin.set_fact:
     download_dir: "/var{{ download_dir }}"
