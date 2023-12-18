@@ -9,7 +9,7 @@
 
 - name: launcher exists
   stat:
-    path: "{{ install_dir }}/eclipse.ini"
+    path: "{{ desktop_file_dir }}/{{ desktop_file }}"
   register: launcher
 
 - name: Install
