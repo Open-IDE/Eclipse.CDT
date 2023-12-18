@@ -24,4 +24,5 @@ download_dir: "/opt/eclipse-cdt"
 install_dir: "{{ download_dir }}/eclipse"
 
 # launcher
-desktop_file_path: "/usr/share/applications/eclipse.desktop"
+desktop_file_dir: "/usr/share/applications"
+desktop_file: "eclipse.desktop"

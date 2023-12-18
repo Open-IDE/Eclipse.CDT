@@ -1,7 +1,7 @@
 - name: Setting filesystem Prefix when rpm-ostree
   ansible.builtin.set_fact:
     download_dir: "/var{{ download_dir }}"
-    desktop_file_path: "/var{{ desktop_file_path }}"
+    desktop_file_dir: "{{ ansible_env.HOME }}/.local/share/applications"
 
 - name: include source
   include_tasks: "from:/{{ source }}/main.yml"
