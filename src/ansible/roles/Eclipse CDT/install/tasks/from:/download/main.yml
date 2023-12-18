@@ -2,10 +2,15 @@
 # Guide: https://github.com/eclipse-cdt/cdt/blob/main/Downloads.md
 # from: https://www.eclipse.org/downloads/packages/release
 
-- name: exists
+- name: installed exists
   stat:
     path: "{{ install_dir }}/eclipse.ini"
   register: install
+
+- name: launcher exists
+  stat:
+    path: "{{ install_dir }}/eclipse.ini"
+  register: launcher
 
 - name: Install
   block:
@@ -36,4 +41,4 @@
       owner: root
       group: root
 
-  when: not install.stat.exists
+  when: not install.stat.exists or not launcher.stat.exists
