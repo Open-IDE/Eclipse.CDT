@@ -22,3 +22,6 @@ download_url: "{{ mirror }}/eclipse/technology/epp/downloads/release/{{ ide_vers
 # install directory
 download_dir: "/opt/eclipse-cdt"
 install_dir: "{{ download_dir }}/eclipse"
+
+# launcher
+desktop_file_path: "/usr/share/applications/eclipse.desktop"

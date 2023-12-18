@@ -32,7 +32,7 @@
     become: true
     ansible.builtin.template:
       src: eclipse.desktop.j2
-      dest: /usr/share/applications/eclipse.desktop
+      dest: "{{ desktop_file_path }}"
       owner: root
       group: root
 
