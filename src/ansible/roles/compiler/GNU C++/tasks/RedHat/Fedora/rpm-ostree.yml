@@ -1,3 +1,4 @@
+---
 - name: Install GNU C++ Compiler
   community.general.rpm_ostree_pkg:
     name: "{{ item }}"

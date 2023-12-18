@@ -1,9 +1,10 @@
-- name: Install GNU C++ Compiler
+---
+- name: Install Clang Compiler
   community.general.rpm_ostree_pkg:
     name: "{{ item }}"
     state: present
   loop:
-  - gcc-c++
+  - clang
   become: true
   notify:
   - Reboot
